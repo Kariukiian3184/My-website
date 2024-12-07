@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Development</title>
+    <style>
+        /* Basic styles for the page */
+        :root{
+        --bg-color:#1f242d;
+        --second-bg-color:#323946;
+        --text-color:#fff;
+        --main-color:#0ef;
+}
+        body {
+            font-family: Arial, sans-serif;
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            background-color: var(--second-bg-color);
+            color: var(--main-color);
+            padding: 20px;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .navbar a {
+            color: var(--text-color);
+            text-decoration: none;
+            padding: 10px 20px;
+        }
+
+        .navbar a:hover {
+            background-color: var(--bg-color);
+            color:var(--main-color);
+        }
+
+        /* Home Section */
+        .home {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 50px;
+            background-color: var(--bg-color);
+            color: white;
+        }
+
+        .home h1 {
+            font-size: 2.5rem;
+            color: var(--main-color);
+        }
+
+        .home .home-content {
+            max-width: 50%;
+            color: var(--text-color);
+        }
+
+        .home .home-img {
+            max-width: 30%;
+            height: auto;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 50px;
+            background-color:var(--bg-color);
+        }
+
+        .services .heading {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .services .service-container {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .service-box {
+            background-color: var(--second-bg-color);
+            padding: 15px;
+            border-radius: 4px;
+            text-align: center;
+            width: 30%;
+            color: var(--text-color);
+        }
+
+        .service-box i {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .read-more-btn {
+            display: inline-block;
+  padding: 8px;
+  border-radius: 8px;
+
+  background: var(--main-color);
+  font-size: .8rem;
+  color: var(--bg-color);
+  letter-spacing: .1rem;
+  font-weight: 400;
+  transition: .5s ease;
+        }
+
+        .read-more-btn:hover {
+            background-color:var(--main-color);
+            color: var(--bg-color);
+        }
+
+        .detailed-content {
+            display: none;
+            padding: 1rem;
+            background-color: var(--bg-color);
+            margin-top: 1rem;
+            border-radius: 8px;
+        }
+
+        .detailed-content.active {
+            display: block;
+        }
+
+        /* Portfolio Section */
+        .portfolio {
+            padding: 50px;
+            background-color: var(--second-bg-color);
+        }
+
+        .portfolio-container {
+            display: flex;
+            gap: 20px;
+            justify-content: space-around;
+        }
+
+        .portfolio-box {
+            position: relative;
+            width: 30%;
+        }
+
+        .portfolio-box img {
+            width: 100%;
+            border-radius: 8px;
+            height: 250px;
+        }
+
+        .portfolio-layer {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color:;
+            color: white;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .portfolio-box:hover .portfolio-layer {
+            display: flex;
+        }
+
+        .portfolio-layer i {
+            font-size: 2rem;
+        }
+
+        /* Footer Section */
+        .footer {
+            background-color:var(--bg-color);
+            color: var(--text-color);
+            text-align: center;
+            padding: 20px;
+        }
+        .heading h2{
+            color: var(--main-color);
+        }
+        .portfolio h2{
+            color: var(--main-color);
+        }
+    </style>
+</head>
+<body>
+
+    <section class="header">
+        <div class="logo">My Portfolio</div>
+        <nav class="navbar">
+            <a href="index.html" class="one">Home</a>
+            <a href="web-development.html" class="one">Web Development</a>
+            <a href="app-development.html" class="one">App Development</a>
+            <a href="graphic-design.html" class="one">Graphic Design</a>
+        </nav>
+    </section>
+
+    <section class="home">
+        <div class="home-content">
+            <h3>Web Development</h3>
+            <h1>Building the Future of the Web</h1>
+            <p>With cutting-edge tools and technologies, I develop dynamic, responsive, and interactive websites that meet modern standards.</p>
+            <button class="btn">Learn More</button>
+        </div>
+        <img src="images/kelly-sikkema-IkHwu5xLXxs-unsplash.jpg" alt="Web Development" class="home-img">
+    </section>
+
+    <section class="services">
+        <div class="heading">
+            <h2>My Web Development Services</h2>
+        </div>
+        <div class="service-container">
+            <div class="service-box">
+                <i class="fas fa-laptop-code"></i>
+                <h3>Responsive Websites</h3>
+                <p>Ensuring your site looks great on all devices.</p>
+                <button class="read-more-btn">Read More</button>
+                <div class="detailed-content">
+                    <p>I use modern front-end frameworks like React and Vue.js to create fast, responsive, and visually appealing websites.</p>
+                </div>
+            </div>
+            <div class="service-box">
+                <i class="fas fa-server"></i>
+                <h3>Backend Development</h3>
+                <p>Building robust and scalable server-side solutions.</p>
+                <button class="read-more-btn">Read More</button>
+                <div class="detailed-content">
+                    <p>I build secure APIs and databases with technologies like Node.js, Express, and MongoDB to support your website's functionality.</p>
+                </div>
+            </div>
+            <div class="service-box">
+                <i class="fas fa-search"></i>
+                <h3>SEO Optimization</h3>
+                <p>Helping your website rank higher on search engines.</p>
+                <button class="read-more-btn">Read More</button>
+                <div class="detailed-content">
+                    <p>I will optimize your website for better search engine visibility, improving traffic and conversion rates.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="portfolio">
+        <h2>My Recent Projects</h2>
+        <div class="portfolio-container">
+            <div class="portfolio-box">
+                <img src="images/tran-mau-tri-tam-g-pKprPg5yw-unsplash.jpg" alt="Project 1">
+                <div class="portfolio-layer">
+                    <h4>Project 1</h4>
+                    <p>A responsive e-commerce website.</p>
+                    <a href="#" target="_blank"><i class="fas fa-eye"></i></a>
+                </div>
+            </div>
+            <div class="portfolio-box">
+                <img src="images/visax-qeoMFduQmag-unsplash.jpg" alt="Project 2">
+                <div class="portfolio-layer">
+                    <h4>Project 2</h4>
+                    <p>A custom-built blog with dynamic content.</p>
+                    <a href="#" target="_blank"><i class="fas fa-eye"></i></a>
+                </div>
+            </div>
+            <div class="portfolio-box">
+                <img src="photo/dose-media-gxGtqG5ul2g-unsplash.jpg" alt="Project 3">
+                <div class="portfolio-layer">
+                    <h4>Project 3</h4>
+                    <p>A portfolio website for creative professionals.</p>
+                    <a href="#" target="_blank"><i class="fas fa-eye"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-text">
+            <p>&copy; 2024 My Portfolio | All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const readMoreButtons = document.querySelectorAll('.read-more-btn');
+            
+            readMoreButtons.forEach(function (button) {
+                button.addEventListener('click', function () {
+                    const content = button.nextElementSibling; // nextElementSibling refers to the div with class 'detailed-content'
+                    content.classList.toggle('active');
+                    
+                    // Optionally toggle button text between 'Read More' and 'Read Less'
+                    if (content.classList.contains('active')) {
+                        button.textContent = 'Read Less';
+                    } else {
+                        button.textContent = 'Read More';
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
